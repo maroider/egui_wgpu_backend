@@ -264,7 +264,7 @@ impl RenderPass {
         &mut self,
         encoder: &mut wgpu::CommandEncoder,
         color_attachment: &wgpu::TextureView,
-        paint_jobs: &[egui::paint::ClippedMesh],
+        paint_jobs: &[egui::epaint::ClippedMesh],
         screen_descriptor: &ScreenDescriptor,
         clear_color: Option<wgpu::Color>,
     ) -> Result<(), BackendError> {
@@ -639,7 +639,7 @@ impl RenderPass {
         &mut self,
         device: &wgpu::Device,
         queue: &wgpu::Queue,
-        paint_jobs: &[egui::paint::ClippedMesh],
+        paint_jobs: &[egui::epaint::ClippedMesh],
         screen_descriptor: &ScreenDescriptor,
     ) {
         let index_size = self.index_buffers.len();
